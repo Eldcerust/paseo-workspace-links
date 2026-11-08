@@ -7,6 +7,7 @@ import type {
 } from "@getpaseo/plugin/client";
 import { useWorkspace } from "@getpaseo/plugin/client";
 import { observeDirectory, type PaseoAgentUpdate, type PaseoWorkspaceUpdate } from "./directory";
+import { registerComposerPill } from "./hub-compat";
 import { Icon } from "@getpaseo/plugin/client/ui";
 import { useLinks } from "./links-query";
 import { LinksPopover } from "./popover";
@@ -98,8 +99,11 @@ export function contributeClient(client: PluginClientContext) {
       }
       if (existing && existing.workspaceId === workspaceId) continue;
       existing?.pill.remove();
-      const pill = client.addComposerPill({
-        id: "workspace-links",
+      // Follows the Pill hub when one is running; otherwise it is the pill it always was.
+      // The header-button placement below is not a composer pill and is left alone.
+      const pill = registerComposerPill(client, {
+        toolId: "workspace-links",
+        glyph: "Link2",
         workspaceId,
         agentId,
         button: linksButton(popover, true),

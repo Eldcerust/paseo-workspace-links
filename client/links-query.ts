@@ -1,4 +1,4 @@
-import { useRpc } from "@getpaseo/plugin/client";
+import { useRpc } from "./hub-compat";
 import { useQuery } from "@tanstack/react-query";
 import type { RpcOutput } from "@getpaseo/plugin";
 import { getLinks, getLinkStatus } from "../shared/links";
