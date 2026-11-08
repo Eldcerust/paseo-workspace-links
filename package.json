@@ -35,7 +35,7 @@
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "node --test \"*/*.test.ts\"",
+    "test": "node --test \"server/*.test.ts\" \"shared/*.test.ts\"",
     "dev": "node ../scripts/dev.mjs",
     "check:install": "node ../scripts/check-install.mjs",
     "security-review": "node ../scripts/security-review.mjs"

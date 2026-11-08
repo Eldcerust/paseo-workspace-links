@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
-import { clientHarness } from "../../test-support/client-harness.mjs";
+import { clientHarness } from "../test-support/client-harness.mjs";
 const directory = fileURLToPath(new URL("..", import.meta.url));
 const agent = { id: "a", workspaceId: "w" };
 const workspace = { id: "w", workspaceDirectory: "/w", projectRootPath: "/w" };

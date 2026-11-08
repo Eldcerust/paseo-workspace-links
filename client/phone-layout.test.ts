@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { fileURLToPath } from "node:url";
 import * as React from "react";
-import { clientHarness } from "../../test-support/client-harness.mjs";
+import { clientHarness } from "../test-support/client-harness.mjs";
 
 const directory = fileURLToPath(new URL("..", import.meta.url));
 
