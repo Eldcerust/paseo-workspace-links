@@ -1,10 +1,13 @@
-{
-  "id": "workspace-links-fork",
-  "name": "Workspace links (fork)",
-  "description": "Your fork of Steve Castaneda's Workspace links, which gives quick access to workspace URLs from a JSON file. Its Links pill can move into the Pill hub's Tools pill.",
-  "icon": "icon.png",
-  "media": ["images/popover.png", "images/explorer.png"],
-  "requirements": {
-    "paseo": ">=0.13.0"
-  }
+﻿{
+    "id":  "workspace-links-fork",
+    "name":  "Workspace links",
+    "description":  "Your fork of Steve Castaneda\u0027s Workspace links, which gives quick access to workspace URLs from a JSON file. Its Links pill can move into the Pill hub\u0027s Tools pill.",
+    "icon":  "icon.png",
+    "media":  [
+                  "images/popover.png",
+                  "images/explorer.png"
+              ],
+    "requirements":  {
+                         "paseo":  "\u003e=0.13.0"
+                     }
 }
